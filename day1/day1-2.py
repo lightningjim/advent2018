@@ -12,6 +12,6 @@ while True:
             print("Duplicate frequency found: " + str(frequency) + " in loop " + str(loop))
             exit(0)
         else:
-            print("Loop " + str(loop) + " - Freq "+ str(frequency) + " - length array " + str(len(running_freq_list)))
+            # print("Loop " + str(loop) + " - Freq "+ str(frequency) + " - length array " + str(len(running_freq_list)))
             running_freq_list.append(frequency)
     loop += 1
