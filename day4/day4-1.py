@@ -81,4 +81,17 @@ for minutes, slept_minute in enumerate(guard_schedule[most_slept_guard]):
 
 print ("Guard #" + str(most_slept_guard) + " is the target, slept " + str(most_slept_minutes) + " minutes")
 print ("Most slept time: 00:" + str(most_slept_time))
-print("Answer: " + str(most_slept_guard * most_slept_time))
+print("Answer 1: " + str(most_slept_guard * most_slept_time))
+
+answer2_guard = 0
+answer2_minute = 0
+answer2_time = 0
+
+for guard, schedule in guard_schedule.items():
+	for minute, slept in enumerate(schedule):
+		if(slept > answer2_time):
+			answer2_time = slept
+			answer2_minute = minute
+			answer2_guard = guard
+print("Guard #" + str(answer2_guard) + " slept " + str(answer2_time) + " times at 00:" + str(answer2_minute))
+print("Answer 2: " + str(answer2_guard * answer2_minute))
